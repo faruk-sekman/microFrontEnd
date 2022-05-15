@@ -1,0 +1,75 @@
+.carousel{
+  display: block;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  ::ng-deep .owl-carousel{
+    position: relative;
+    display: block;
+    height: 300px;
+    .owl-item{
+      float: left;
+      display: block;
+      img{
+      }
+    }
+    .owl-nav {
+      position: relative;
+      .owl-prev, .owl-next {
+        height: 45px;
+        width: 30px;
+        position: absolute;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        top: 114px;
+        padding: 10px 5px;
+        cursor: pointer;
+      }
+      .owl-prev {
+        left: 0;
+      }
+      .owl-next {
+        right: 0;
+      }
+      .icon{
+        display: inline-block;
+        height: 26px;
+        width: 13px;
+      }
+      .icon_right{
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' height='26'%3E%3Cpath d='M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z'/%3E%3C/svg%3E");
+      }
+      .icon_left{
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' height='26'%3E%3Cpath d='M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z'/%3E%3C/svg%3E");
+      }
+    }
+    .owl-dots {
+      position: absolute;
+      width: 80px;
+      height: 10px;
+      bottom: 16px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      .owl-dot {
+        display: inline-block;
+        padding: 3px;
+        cursor: pointer;
+        span {
+          width: 15px;
+          height: 15px;
+          background-color: rgba(255,255,255,0.6);
+          display: block;
+          border: 2px solid rgba(0,0,0,0.6);
+        }
+        &.active{
+          span{
+            background-color: rgb(255,255,255);
+            display: block;
+            border: 2px solid rgb(0,0,0);
+          }
+        }
+      }
+    }
+  }
+}
