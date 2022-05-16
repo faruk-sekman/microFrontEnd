@@ -1,0 +1,64 @@
+.products{
+  .item{
+    cursor: pointer;
+    .card{
+      text-decoration: none;
+      color: #171717;
+      .card-img-top{
+        width: fit-content;
+        height: 150px;
+        max-width: 100%;
+        margin: auto;
+      }
+      .card-body{
+        position: relative;
+
+        .card-title{
+          font-size: 18px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+          -webkit-box-orient: vertical;
+          color: #1d1d1d;
+        }
+        .card-text{
+          cursor: pointer;
+          text-decoration: none;
+          font-size: 14px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+          -webkit-box-orient: vertical;
+          color: #0241ff;
+        }
+        .item-footer{
+          margin-top: 5px;
+          border-top: 1px solid #ddd;
+          font-size: 13px;
+          margin-bottom: -13px;
+          span{
+            vertical-align: middle;
+          }
+          svg{
+            margin-right: 3px;
+          }
+          .rate{
+            padding: 5px;
+            text-align: left;
+          }
+          .price{
+            padding: 5px;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+  .moreBtn{
+    cursor: pointer;
+  }
+}

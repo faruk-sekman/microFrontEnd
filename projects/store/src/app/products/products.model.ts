@@ -2,12 +2,12 @@ export interface ProductsModel {
     id: number;
     title: string;
     description: string;
-    price:number;
+    price: number;
     category: string;
     image: string;
     rating: RateModel;
 }
 export interface RateModel {
-    rate: number;
+    rate: any;
     count: string;
 }
