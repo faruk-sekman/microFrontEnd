@@ -28,11 +28,8 @@ http://localhost:3001/ - Store App (Root: projects > store)
 http://localhost:3002/ - Shell App (Root: projects > shell)
 ###
 ![](documents/appsInfo.png)
-### Compiles and minifies for production
-```
-npm run build
-```
 #
+
 
 # First window that opens screen (MainApp)
 ![](documents/mainApp_Screen_01.png)
@@ -52,6 +49,11 @@ npm run build
 ![](documents/shellApp_Screen_02.png)
 #
 
+
+### Compiles and minifies for production
+```
+npm run build
+```
 #
 ### Lints and fixes files
 ```
