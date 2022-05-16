@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import {BannerService} from "./banner.service";
+import {BannerModel} from "./banner.model";
 
 @Component({
   selector: 'app-banner',
@@ -7,23 +9,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./banner.component.scss']
 })
 export class BannerComponent implements OnInit {
-  public slidesStore:any = [
-    {
-      src: 'https://source.unsplash.com/1600x400/?nature,water',
-      id: '1s',
-      title: 'Lorem Ipsum 1'
-    },
-    {
-      src: 'https://source.unsplash.com/1600x1400/?nature,forest',
-      id: '2s',
-      title: 'Lorem Ipsum 2'
-    },
-    {
-      src: 'https://source.unsplash.com/1600x400/?nature,forest',
-      id: '3s',
-      title: 'Lorem Ipsum 3'
-    }
-  ]
+  public banners: BannerModel[] = [];
   public customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
@@ -48,9 +34,15 @@ export class BannerComponent implements OnInit {
     },
     nav: true
   }
-  constructor() { }
+  constructor(private bannerService: BannerService) { }
 
   ngOnInit(): void {
+    this.getProducts();
   }
 
+  getProducts(): void {
+      this.bannerService.getBanners("?page=6&limit=3").subscribe(data => {
+        this.banners = data;
+      });
+  }
 }

@@ -11,10 +11,14 @@
       float: left;
       display: block;
       img{
+        width: fit-content;
       }
     }
     .owl-nav {
-      position: relative;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
       .owl-prev, .owl-next {
         height: 45px;
         width: 30px;
@@ -24,6 +28,8 @@
         top: 114px;
         padding: 10px 5px;
         cursor: pointer;
+        margin: 0;
+        border-radius: 0;
       }
       .owl-prev {
         left: 0;
@@ -61,6 +67,8 @@
           background-color: rgba(255,255,255,0.6);
           display: block;
           border: 2px solid rgba(0,0,0,0.6);
+          margin: 0;
+          border-radius: 0;
         }
         &.active{
           span{

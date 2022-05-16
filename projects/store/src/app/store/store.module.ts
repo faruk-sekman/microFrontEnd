@@ -8,6 +8,7 @@ import {BannerComponent} from "../banner/banner.component";
 import {ProductsComponent} from "../products/products.component";
 
 import {ProductsService} from '../products/products.service';
+import {BannerService} from '../banner/banner.service';
 
 @NgModule({
     imports: [
@@ -25,7 +26,8 @@ import {ProductsService} from '../products/products.service';
         StoreComponent,
     ],
     providers: [
-        ProductsService
+        ProductsService,
+        BannerService
     ]
 })
 export class StoreModule {

@@ -4,7 +4,8 @@
 
 export const environment = {
     production: false,
-    apiProductsUrl: 'https://fakestoreapi.com/products'
+    apiProductsUrl: 'https://fakestoreapi.com/products',
+    apiBannersUrl: 'https://picsum.photos/v2/list'
 };
 
 /*
