@@ -1,8 +1,8 @@
-<div class="products">
+<div class="products" *ngIf="dataLoaded; else skeleton">
     <div class="container-fluid">
         <div class="row row-cols-1 row-cols-sm-3 g-4 pt-4 pb-4">
             <div class="col item" *ngFor="let product of products">
-                <a class="card h-100" href="javascript:void(0);" title="{{product.description}}">
+                <a class="card h-100" href="javascript:void(0);" title="{{product.description}}" [@fadeIn]>
                     <img src="{{product.image}}" class="card-img-top" alt="{{product.title}}">
                     <div class="card-body">
                         <h5 class="card-title">
@@ -40,3 +40,30 @@
         </div>
     </div>
 </div>
+
+<ng-template #skeleton>
+    <div class="products skeleton">
+        <div class="container-fluid">
+            <div class="row row-cols-1 row-cols-sm-3 g-4 pt-4 pb-4">
+                <div class="col item" *ngFor="let item of counter(itemCount);">
+                    <a class="card h-100" href="javascript:void(0);">
+                        <img class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <div class="card-text"></div>
+                            <div class="item-footer">
+                                <span class="rate">
+                                </span>
+                                <span class="price">
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="mb-4 text-center">
+                <a class="moreBtn"></a>
+            </div>
+        </div>
+    </div>
+</ng-template>

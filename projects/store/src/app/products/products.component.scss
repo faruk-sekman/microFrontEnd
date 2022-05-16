@@ -1,19 +1,22 @@
-.products{
-  .item{
+.products {
+  .item {
     cursor: pointer;
-    .card{
+
+    .card {
       text-decoration: none;
       color: #171717;
-      .card-img-top{
+
+      .card-img-top {
         width: fit-content;
         height: 150px;
         max-width: 100%;
         margin: auto;
       }
-      .card-body{
+
+      .card-body {
         position: relative;
 
-        .card-title{
+        .card-title {
           font-size: 18px;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -23,7 +26,8 @@
           -webkit-box-orient: vertical;
           color: #1d1d1d;
         }
-        .card-text{
+
+        .card-text {
           cursor: pointer;
           text-decoration: none;
           font-size: 14px;
@@ -35,22 +39,27 @@
           -webkit-box-orient: vertical;
           color: #0241ff;
         }
-        .item-footer{
+
+        .item-footer {
           margin-top: 5px;
           border-top: 1px solid #ddd;
           font-size: 13px;
           margin-bottom: -13px;
-          span{
+
+          span {
             vertical-align: middle;
           }
-          svg{
+
+          svg {
             margin-right: 3px;
           }
-          .rate{
+
+          .rate {
             padding: 5px;
             text-align: left;
           }
-          .price{
+
+          .price {
             padding: 5px;
             text-align: right;
           }
@@ -58,7 +67,63 @@
       }
     }
   }
-  .moreBtn{
+
+  .moreBtn {
     cursor: pointer;
+  }
+
+  &.skeleton {
+    h5:empty, p:empty, a:empty, img, span:empty, div:empty {
+      animation: loading 1.7s infinite linear;
+      background: #dedfe1;
+      background-image: -webkit-linear-gradient(to right, #dedfe1 0%, #f2f3f5 20%, #dedfe1 40%, #dedfe1 100%);
+      background-image: linear-gradient(to right, #dedfe1 0%, #f2f3f5 20%, #dedfe1 40%, #dedfe1 100%);
+      background-repeat: no-repeat;
+    }
+
+    .item {
+
+      .card {
+        .card-img-top {
+          border: none !important;
+          border-radius: 0;
+          width: 100%;
+          height: 150px;
+        }
+
+        .card-body {
+          .card-title {
+            height: 20px;
+          }
+
+          .card-text {
+            height: 18px;
+          }
+
+          .item-footer {
+            display: flex;
+            .rate, .price {
+              height: 16px;
+              width: 50%;
+              margin: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    .moreBtn {
+      height: 20px;
+    }
+
+    @keyframes loading {
+      0% {
+        background-position: -100px;
+      }
+
+      100% {
+        background-position: 200px;
+      }
+    }
   }
 }
