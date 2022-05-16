@@ -29,8 +29,8 @@ http://localhost:3002/ - Shell App (Root: projects > shell)
 ###
 ![](documents/appsInfo.png)
 #
-
-
+## Application Architecture Diagram
+![](documents/Application_Architecture_Diagram.jpeg)
 # First window that opens screen (MainApp)
 ![](documents/mainApp_Screen_01.png)
 ####
