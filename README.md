@@ -1,4 +1,4 @@
-# Test Case MF
+# Micro FrontEnd
 
 ## Project setup
 ```
